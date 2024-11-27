@@ -22,7 +22,7 @@ stage('Sequential Tests'){
 steps{
 echo 'Starting Sequential Tests'
 }
-stages{
+
 stage('Acceptance Testing'){
 steps{
 echo 'Running Acceptance Testing...'}
@@ -30,7 +30,7 @@ echo 'Running Acceptance Testing...'}
 stage('Regression Testing'){
 steps{
 echo 'Running Regression Testing...'}
-}}}
+}}
 stage('Parallel Tasks')
 {
 parallel{
