@@ -5,4 +5,38 @@ stages{
 stage('Checkout Code'){
 steps{
 echo 'Checking out from repo'
-git branch:'main' url:
+git branch:'main' url:'https://github.com/sandy3069/Test.git'
+}
+}
+stage('Clean Package')
+{
+steps{
+echo 'Cleaning the packaging'
+sh 'mvn clean package'
+}
+}
+stage('Sequential Tests')
+echo 'Starting Sequential Tests'
+}
+}
+stages{
+stage('Acceptance Testing'){
+steps{
+echo 'Running Acceptance Testing...'}
+}
+stage('Regression Testing'){
+steps{
+echo 'Running Regression Testing...'}
+}}}}
+stage('Parallel Tasks')
+{
+parallel{
+stage('Perfomance Testing')
+steps{
+echo 'Running Perfomance Testing..'
+}
+}
+stage('code Quality Test')
+steps{
+echo 'Running Code Quality Check..'}}}}}
+
