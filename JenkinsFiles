@@ -19,9 +19,6 @@ sh 'mvn clean package'
 }
 }
 stage('Sequential Tests'){
-steps{
-echo 'Starting Sequential Tests'
-}
 stages{
 stage('Acceptance Testing'){
 steps{
