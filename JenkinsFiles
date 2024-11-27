@@ -1,9 +1,12 @@
 pipeline
 {
  agent any
-stages{
-stage('Checkout Code'){
-steps{
+stages
+{
+stage('Checkout Code')
+{
+steps
+{
 echo 'Checking out from repo'
 git branch:'main' url:'https://github.com/sandy3069/Test.git'
 }
@@ -15,10 +18,11 @@ echo 'Cleaning the packaging'
 sh 'mvn clean package'
 }
 }
-stage('Sequential Tests')
+stage('Sequential Tests'){
+steps{
 echo 'Starting Sequential Tests'
 }
-}
+
 stages{
 stage('Acceptance Testing'){
 steps{
@@ -27,16 +31,16 @@ echo 'Running Acceptance Testing...'}
 stage('Regression Testing'){
 steps{
 echo 'Running Regression Testing...'}
-}}}}
+}}}
 stage('Parallel Tasks')
 {
 parallel{
-stage('Perfomance Testing')
+stage('Perfomance Testing'){
 steps{
 echo 'Running Perfomance Testing..'
 }
 }
-stage('code Quality Test')
+stage('code Quality Test'){
 steps{
 echo 'Running Code Quality Check..'}}}}}
 
