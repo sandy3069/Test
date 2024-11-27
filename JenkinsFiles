@@ -8,7 +8,7 @@ stage('Checkout Code')
 steps
 {
 echo 'Checking out from repo'
-git branch:'main' url:'https://github.com/sandy3069/Test.git'
+git branch:'main',url:'https://github.com/sandy3069/Test.git'
 }
 }
 stage('Clean Package')
