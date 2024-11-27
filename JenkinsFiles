@@ -22,7 +22,6 @@ stage('Sequential Tests'){
 steps{
 echo 'Starting Sequential Tests'
 }
-
 stages{
 stage('Acceptance Testing'){
 steps{
@@ -42,5 +41,7 @@ echo 'Running Perfomance Testing..'
 }
 stage('code Quality Test'){
 steps{
-echo 'Running Code Quality Check..'}}}}}
-
+echo 'Running Code Quality Check..'}
+}
+}
+}
